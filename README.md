@@ -1,27 +1,132 @@
-# Switch-Games-Checker
-A Python-based scanner that automatically searches all connected drives for NSP, NSZ, XCI, XCZ files, organizes them by Title ID, and detects duplicate base games, updates, and DLC content.
+# 🎮 Switch Games Checker
 
-REQUIREMENTS:
+Switch Games Checker is a Python-based CLI tool that automatically scans all connected drives for:
 
+- `.nsp`
+- `.nsz`
+- `.xci`
+- `.xcz`
+
+It organizes files by **Title ID** and detects duplicate:
+
+- Base Games  
+- Updates  
+- DLC  
+
+It also provides library statistics and a search function.
+
+---
+
+## ✅ Features
+
+- Automatic scan of all connected drives (C, D, E, F, etc.)
+- Duplicate detection by Title ID
+- Update version comparison (shows highest version)
+- Library statistics:
+  - Base Games count
+  - Updates count
+  - DLC count
+  - Unique Base Titles
+  - Total files
+- Optional logging system
+- Clean CLI interface
+- Compatible with:
+  - Windows 10
+  - Windows 11
+  - Linux
+
+---
+
+## 📦 Requirements
+
+- Python 3.10+
+- `colorama`
+
+Install dependencies:
+
+```bash
 py -m pip install -r requirements.txt
+```
 
+---
 
-SETUP:
+## 📁 Recommended Folder Structure
 
 Prepare your directories like this:
 
-X:\NSP\titles            <-- PUT GAMES BASE
+```
+X:\NSP\titles            <-- Base Games
+X:\NSP\titles\updates    <-- Updates
+X:\NSP\titles\DLC        <-- DLC
+```
 
-X:\NSP\titles\updates    <-- PUT GAMES UPDATES
+Where:
 
-X:\NSP\titles\DLC        <-- PUT GAMES DLC
+- `X` = your drive letter (C, D, E, F, G, etc.)
+- You can use multiple drives
+- The tool automatically scans all drives
 
-X = name of your disk. You can have multiple disks, such as c, d, e, f, g, etc. The tool will scan all disks for files.
+---
 
-USAGE:
+## 🚀 Usage
 
-Open a shell (cmd or powershell)
+Open a shell (CMD or PowerShell) in the project folder:
 
+```bash
 py switch_games_checker.py
+```
 
-Enjoy! =)
+Then use the interactive menu.
+
+---
+
+## 📝 Logs
+
+If enabled from the menu, the tool automatically creates:
+
+```
+logs/
+```
+
+and stores results inside:
+
+```
+logs/switch_checker_log.txt
+```
+
+---
+
+## 🛠 Build Standalone .exe
+
+Install PyInstaller:
+
+```bash
+py -m pip install pyinstaller
+```
+
+Build single executable:
+
+```bash
+pyinstaller --onefile --clean switch_games_checker.py
+```
+
+The executable will be created in:
+
+```
+dist/switch_games_checker.exe
+```
+
+Python is NOT required on the target machine.
+
+---
+
+## 👤 Author
+
+krz
+
+---
+
+## ⚠ Disclaimer
+
+This tool does not download, modify, or distribute any game files.  
+It only scans and analyzes files already present on your local drives.
