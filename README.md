@@ -130,3 +130,18 @@ krz
 
 This tool does not download, modify, or distribute any game files.  
 It only scans and analyzes files already present on your local drives.
+
+---
+
+## 📄 Main Script
+
+Below is the main script entry point:
+
+```python
+if __name__ == "__main__":
+    main()
+```
+
+The full source code is available in:
+
+switch_games_checker.py
