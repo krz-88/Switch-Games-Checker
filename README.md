@@ -12,3 +12,11 @@ X:\NSP\titles\updates    <-- PUT GAMES UPDATES
 X:\NSP\titles\DLC        <-- PUT GAMES DLC
 
 X = name of your disk. You can have multiple disks, such as c, d, e, f, g, etc. The tool will scan all disks for files.
+
+USAGE:
+
+Open a shell (cmd or powershell)
+
+py switch_games_checker.py
+
+Enjoy! =)
