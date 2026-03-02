@@ -144,4 +144,4 @@ if __name__ == "__main__":
 
 The full source code is available in:
 
-switch_games_checker.py
+[switch_games_checker.py](./switch_games_checker.py)
